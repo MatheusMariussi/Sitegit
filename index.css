@@ -5,7 +5,7 @@ html{
 	font-size:18px;
 }
 body{
-	background:#ccc url(https://www.cssauthor.com/wp-content/uploads/2013/07/Blurred-Background_2.jpg) center top no-repeat;
+	background:#ccc;
 	background-size:100%;
 	background-attachment:fixed;
 }
@@ -51,7 +51,7 @@ img{
 	display:inline-block;
 }
 .barrarosa{
-	background: rgb(141,36, 53);
+	background: yellowgreen;
 }
 .barrarosa ul{
 	margin:0;

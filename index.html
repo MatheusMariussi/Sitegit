@@ -6,8 +6,32 @@
 
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="shortcut icon" HREF="https://raw.githubusercontent.com/MatheusMariussi/Sitegit/master/favicon.ico">
-
     <title>BCC</title>
+
+    <style>
+        .collapsible {
+          background-color: #ffffff;
+          color: black;
+          font-weight: bold;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 25px;
+        }
+        .active, .collapsible:hover {
+          background-color: yellowgreen;
+        }
+        .content {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #b4b1b1;
+        }
+        </style>
 </head>
 
 <body>
@@ -29,24 +53,45 @@
             <div class="materias">
                 <div class="espacamento">
                     <h1>Matérias</h1>
-                    <p>
-                        <img src="" />
-                    </p>
-                    <p>
-                        Descoberta e Evolução da Computação
-                    </p>
-                    <p>
-                        Experiência Criativa: Navegando na Computação
-                    </p>
-                    <p>
-                        Modelagem de Fenômenos Físicos
-                    </p>
-                    <p>
-                        Raciocínio Algorítmico
-                    </p>
-                    <p>
-                        Filosofia
-                    </p>
+
+<button class="collapsible">Experiência Criativa</button>
+<div class="content">
+  <p>Os TDEs serao inseridos</p>
+</div>
+<button class="collapsible">Modelagem de Fenômenos Físicos</button>
+<div class="content">
+  <p>Os TDEs serao inseridos</p>
+</div>
+<button class="collapsible">Raciocínio Algorítmico</button>
+<div class="content">
+  <p>Os TDEs serao inseridos</p>
+</div>
+<button class="collapsible">Descoberta e Evolução da Computação</button>
+<div class="content">
+  <p>Os TDEs serao inseridos</p>
+</div>
+<button class="collapsible">Filosofia</button>
+<div class="content">
+  <p>Os TDEs serao inseridos</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
                 </div>
             </div>
             <div class="barra-lateral">
